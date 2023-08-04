@@ -1,4 +1,58 @@
 <resources>
     <string name="app_name">My Dhaka Project</string>
 
+    <string-array name="MainPartString">
+        <item>Hospital</item>
+        <item>Ambulance</item>
+        <item>Police</item>
+        <item>Fire-Service</item>
+    </string-array>
+
+    <string-array name="MainSecondString">
+        <item>Hotel</item>
+        <item>Restaurant</item>
+        <item>Shopping Mall</item>
+    </string-array>
+
+    <string-array name="MainThirdString">
+        <item>Desco</item>
+        <item>Dhaka WASA</item>
+        <item>Titas</item>
+        <item>Daraz</item>
+    </string-array>
+
+    <string-array name="CategoryOne">
+        <item>Hospital</item>
+        <item>Ambulance</item>
+        <item>Police</item>
+        <item>Fire Service</item>
+        <item>Blood Donor</item>
+        <item>Blood Bank</item>
+        <item>Lawyer</item>
+        <item>Help Me</item>
+    </string-array>
+
+    <string-array name="CategoryTwo">
+        <item>Hotel</item>
+        <item>Restaurant</item>
+        <item>Shopping Mall</item>
+        <item>Places</item>
+    </string-array>
+
+    <string-array name="CategoryThree">
+
+        <item>Desco</item>
+        <item>Dhaka WASA</item>
+        <item>Titas</item>
+        <item>Daraz</item>
+        <item>Birkoy</item>
+        <item>BD Jobs</item>
+        <item>Goo Zayaan</item>
+        <item>Sohoz Bus</item>
+        <item>BD Railway</item>
+        <item>SIM</item>
+
+    </string-array>
+
+
 </resources>

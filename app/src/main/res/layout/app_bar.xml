@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/AppbarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_height="130dp"
+            android:layout_width="match_parent"
+            android:background="#00EB09">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/app_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="sans-serif-black"
+                    android:text="My Dhaka"
+                    android:textColor="@color/white"
+                    android:textSize="28sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/app_title"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/sutonnymj"
+                    android:text="একটি সুন্দর ও সহজ ঢাকার প্রয়াস"
+                    android:textColor="#000551"
+                    android:textSize="14sp">
+                </TextView>
+
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/callButton"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp"
+                    app:lottie_loop="true"
+                    app:lottie_autoPlay="true"
+                    app:lottie_rawRes="@raw/call"
+                    app:lottie_repeatMode="reverse">
+
+                </com.airbnb.lottie.LottieAnimationView>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/callButton"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/kumarkhali"
+                    android:text="জরুরী কলঃ ৯৯৯"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+</RelativeLayout>
