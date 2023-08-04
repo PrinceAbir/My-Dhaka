@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Views.Category">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Categories"
+        android:textSize="22sp"
+        android:textStyle="bold">
+
+
+    </TextView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/nav"
+        android:layout_below="@id/title">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tag1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Emergency"
+                android:textColor="#878787"
+                android:textSize="16sp"
+                android:textStyle="bold"></TextView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerOne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="10dp">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/tag2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Others"
+                android:textColor="#878787"
+                android:textSize="16sp"
+                android:textStyle="bold"></TextView>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerTwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="10dp">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+            <TextView
+                android:id="@+id/tag3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Utility &amp; More"
+                android:textColor="#878787"
+                android:textSize="16sp"
+                android:textStyle="bold"></TextView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerThree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="10dp">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <include layout="@layout/bottom_navigation" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

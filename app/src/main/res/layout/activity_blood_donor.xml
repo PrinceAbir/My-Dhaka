@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Views.BloodDonor">
+
+    <LinearLayout
+        android:id="@+id/search_area"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+        android:background="#0011FF"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/blood_donor_search_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@color/white"
+            android:paddingStart="10dp"
+            app:queryHint="Search Blood Donor"
+            tools:ignore="RtlSymmetry">
+
+        </androidx.appcompat.widget.SearchView>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/slider_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_area"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:paddingStart="10dp"
+            android:text="Gallery"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold|italic"
+            tools:ignore="RtlSymmetry">
+
+        </TextView>
+
+        <com.denzcoskun.imageslider.ImageSlider
+            android:id="@+id/blood_donor_image_slider"
+            android:layout_width="wrap_content"
+            android:layout_height="180dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            app:iss_auto_cycle="true"
+            app:iss_corner_radius="24"
+            app:iss_delay="1000"
+            app:iss_period="3000"
+            app:iss_text_align="CENTER" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/blood_donor_progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="78dp"
+        android:layout_below="@id/slider_area"
+        android:layout_gravity="center"
+        android:forceHasOverlappingRendering="true"
+        android:indeterminate="true"
+        android:indeterminateDrawable="@drawable/custom_progress"
+        tools:targetApi="n">
+
+    </ProgressBar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/nav"
+        android:layout_below="@id/slider_area"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/blood_donor_recycler_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:paddingStart="5dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold|italic"
+            tools:ignore="RtlSymmetry"></TextView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/BloodDonorRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:visibility="visible">
+
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <include layout="@layout/bottom_navigation" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
