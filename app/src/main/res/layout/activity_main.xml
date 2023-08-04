@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Views.Home"
+    android:gravity="center">
+
+
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/app_bar"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_height="wrap_content">
+
+    </include>
+
+    <com.denzcoskun.imageslider.ImageSlider
+        android:id="@+id/image_slider"
+        android:layout_width="wrap_content"
+        android:layout_height="220dp"
+        android:layout_below="@id/app_bar"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:iss_auto_cycle="true"
+        app:iss_corner_radius="24"
+        app:iss_delay="1000"
+        app:iss_period="1000"
+        app:iss_text_align="CENTER"
+         />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/nav"
+        android:layout_below="@id/image_slider"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <RelativeLayout
+                android:id="@+id/MainLayoutFirstSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/background_stroke">
+
+                <LinearLayout
+                    android:id="@+id/upperDesign"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal"
+                    android:background="@drawable/background_stroke">
+
+                    <TextView
+                        android:layout_width="250dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="Emergency Help"
+                        android:textColor="@color/gray"
+                        android:paddingStart="10dp"
+                        android:textSize="14sp"
+                        android:textStyle="bold">
+
+
+                    </TextView>
+
+                    <Button
+                        android:id="@+id/emergency_More"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end"
+                        android:drawableEnd="@drawable/right_arrow"
+                        android:gravity="center_vertical"
+                        android:text="More"
+                        android:textAllCaps="false"
+                        android:textColor="@color/blue"
+                        android:drawableTint="@color/blue"
+                        android:textSize="14sp"
+                        android:textStyle="bold">
+
+                    </Button>
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/MainFirstRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/upperDesign"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:padding="5dp"
+                    android:orientation="horizontal">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/MainLayoutSecondSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/MainLayoutFirstSection"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/background_stroke">
+
+                <LinearLayout
+                    android:id="@+id/upperDesignOthers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal"
+                    android:background="@drawable/background_stroke">
+
+                    <TextView
+                        android:layout_width="250dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="Others"
+                        android:textColor="@color/gray"
+                        android:paddingStart="10dp"
+                        android:textSize="14sp"
+                        android:textStyle="bold">
+
+
+                    </TextView>
+
+                    <Button
+                        android:id="@+id/other_more"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end"
+                        android:drawableEnd="@drawable/right_arrow"
+                        android:gravity="center_vertical"
+                        android:text="More"
+                        android:textAllCaps="false"
+                        android:textColor="@color/blue"
+                        android:drawableTint="@color/blue"
+                        android:textSize="14sp"
+                        android:textStyle="bold">
+
+                    </Button>
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/MainSecondRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/upperDesignOthers"
+                    android:orientation="horizontal"
+                    android:layout_margin="5dp">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/MainLayoutThirdSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/MainLayoutSecondSection"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/background_stroke">
+
+                <LinearLayout
+                    android:id="@+id/upperDesignUtility"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal"
+                    android:background="@drawable/background_stroke">
+
+                    <TextView
+                        android:layout_width="250dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="Utility &amp; More"
+                        android:textColor="@color/gray"
+                        android:paddingStart="10dp"
+                        android:textSize="14sp"
+                        android:textStyle="bold">
+
+
+                    </TextView>
+
+                    <Button
+                        android:id="@+id/utility_more"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end"
+                        android:drawableEnd="@drawable/right_arrow"
+                        android:gravity="center_vertical"
+                        android:text="More"
+                        android:textAllCaps="false"
+                        android:textColor="@color/blue"
+                        android:drawableTint="@color/blue"
+                        android:textSize="14sp"
+                        android:textStyle="bold">
+
+                    </Button>
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/MainThirdRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/upperDesignUtility"
+                    android:orientation="horizontal"
+                    android:layout_margin="5dp">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/nav">
+
+        <include layout="@layout/bottom_navigation"/>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
