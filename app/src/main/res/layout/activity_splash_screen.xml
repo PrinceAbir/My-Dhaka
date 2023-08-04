@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_screen_background"
+    android:orientation="vertical"
+    tools:context=".Views.SplashScreen">
+
+
+    <ImageView
+        android:id="@+id/SplashIcon"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="420dp"
+        android:layout_marginTop="130dp"
+        android:src="@drawable/dhaka_icon">
+
+    </ImageView>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieAnimation"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@+id/SplashIcon"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/ring">
+
+    </com.airbnb.lottie.LottieAnimationView>
+
+
+    <TextView
+        android:id="@+id/SplashAppName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="My Dhaka"
+        android:textColor="#0460FF"
+        android:textSize="32sp">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/tagInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginBottom="-30dp"
+        android:text="Making the city life easy."
+        android:textColor="@color/black"
+        android:textSize="18sp">
+
+    </TextView>
+
+</RelativeLayout>
+
