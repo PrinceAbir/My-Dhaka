@@ -3,6 +3,7 @@ package com.example.mydhakaproject.Views;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -14,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
@@ -25,7 +27,7 @@ import com.google.android.material.navigation.NavigationBarView;
 
 import java.util.ArrayList;
 
-public class Home extends AppCompatActivity{
+public class Home extends AppCompatActivity {
 
 
     BottomNavigationView bottomNavigationView;
@@ -33,8 +35,10 @@ public class Home extends AppCompatActivity{
 
     HomeAdapter homeAdapter;
     ArrayList<ModelMain> list;
-    int[] images;
+
     String[] name;
+
+    LottieAnimationView callButton;
 
 
     @Override
@@ -50,13 +54,20 @@ public class Home extends AppCompatActivity{
         ImageSlider();
 
 
+        callButton = findViewById(R.id.callButton);
 
+        callButton.setOnClickListener(v -> {
 
+            String phoneNumber = "999";
 
+            Intent intent = new Intent(Intent.ACTION_DIAL);
+            intent.setData(Uri.parse("tel:" + phoneNumber));
+            startActivity(intent);
+
+        });
 
 
     }
-
 
 
     public void RecyclerPartOne() {
@@ -67,7 +78,7 @@ public class Home extends AppCompatActivity{
         list = new ArrayList<>();
 
 
-        int[] imageID = {R.drawable.hospital,R.drawable.ambulance,R.drawable.police,R.drawable.fire_service};
+        int[] imageID = {R.drawable.hospital, R.drawable.ambulance, R.drawable.police, R.drawable.fire_service};
 
         name = getResources().getStringArray(R.array.MainPartString);
 
@@ -103,7 +114,7 @@ public class Home extends AppCompatActivity{
         list = new ArrayList<>();
 
 
-        int[] imageID = {R.drawable.hotel,R.drawable.restaurant,R.drawable.shopping_mall};
+        int[] imageID = {R.drawable.hotel, R.drawable.restaurant, R.drawable.shopping_mall};
 
         name = getResources().getStringArray(R.array.MainSecondString);
 
@@ -137,7 +148,7 @@ public class Home extends AppCompatActivity{
         list = new ArrayList<>();
 
 
-        int[] imageID = {R.drawable.desco_icon,R.drawable.wasa_icon,R.drawable.titas_icon,R.drawable.daraz_icon};
+        int[] imageID = {R.drawable.desco_icon, R.drawable.wasa_icon, R.drawable.titas_icon, R.drawable.daraz_icon};
 
         name = getResources().getStringArray(R.array.MainThirdString);
 
@@ -166,7 +177,6 @@ public class Home extends AppCompatActivity{
     }
 
 
-
     public void bottomNavTask() {
 
         bottomNavigationView = findViewById(R.id.bottom_nav);
@@ -176,29 +186,24 @@ public class Home extends AppCompatActivity{
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
-                String Item  = item.getTitle().toString();
+                String Item = item.getTitle().toString();
                 item.getIcon().setTint(Color.RED);
 
-                if (Item.contains("Home")){
+                if (Item.contains("Home")) {
 
-                    Intent intent = new Intent(getApplicationContext(),Home.class);
+                    Intent intent = new Intent(getApplicationContext(), Home.class);
                     startActivity(intent);
                     finish();
 
-                }
-                else if(Item.contains("Category"))
-                {
-                    Intent intent = new Intent(getApplicationContext(),Category.class);
+                } else if (Item.contains("Category")) {
+                    Intent intent = new Intent(getApplicationContext(), Category.class);
                     startActivity(intent);
                     finish();
-                }
-                else if (Item.contains("Notification"))
-                {
+                } else if (Item.contains("Notification")) {
 
                     Toast.makeText(getApplicationContext(), "Hello I am Notification", Toast.LENGTH_SHORT).show();
 
-                }
-                else{
+                } else {
 
 
                     Toast.makeText(getApplicationContext(), "Hello I am About", Toast.LENGTH_SHORT).show();
@@ -207,8 +212,6 @@ public class Home extends AppCompatActivity{
             }
         });
     }
-
-
 
 
     public void showExitDialog() {

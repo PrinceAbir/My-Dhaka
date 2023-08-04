@@ -33,7 +33,7 @@ public class SplashScreen extends AppCompatActivity {
 
         appIcon.animate().translationXBy(-700).rotation(360).setDuration(2500).setStartDelay(0).start();
         appName.animate().translationYBy(-400).setDuration(3000).setStartDelay(0).start();
-        tagInfo.animate().translationY(-300).setDuration(3500).setStartDelay(0).start();
+        tagInfo.animate().translationY(-330).setDuration(3500).setStartDelay(0).start();
 
 
 

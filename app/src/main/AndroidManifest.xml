@@ -28,6 +28,33 @@
         android:theme="@style/Theme.MyDhakaProject"
         tools:targetApi="31">
         <activity
+            android:name=".Views.HelpMe"
+            android:exported="false" />
+        <activity
+            android:name=".Views.Lawyer"
+            android:exported="false" />
+        <activity
+            android:name=".Views.BloodBank"
+            android:exported="false" />
+        <activity
+            android:name=".Views.FireService"
+            android:exported="false" />
+        <activity
+            android:name=".Views.Category"
+            android:exported="false" />
+        <activity
+            android:name=".Views.BloodDonor"
+            android:exported="false" />
+        <activity
+            android:name=".Views.Police"
+            android:exported="false" />
+        <activity
+            android:name=".Views.Ambulance"
+            android:exported="false" />
+        <activity
+            android:name=".Views.Hospital"
+            android:exported="false" />
+        <activity
             android:name=".Views.SplashScreen"
             android:exported="true">
             <intent-filter>

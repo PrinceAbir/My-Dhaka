@@ -11,8 +11,8 @@
 
     <ImageView
         android:id="@+id/SplashIcon"
-        android:layout_width="96dp"
-        android:layout_height="96dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_alignParentTop="true"
         android:layout_marginStart="420dp"
         android:layout_marginTop="130dp"
@@ -50,8 +50,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:gravity="center"
         android:layout_marginBottom="-30dp"
+        android:gravity="center"
         android:text="Making the city life easy."
         android:textColor="@color/black"
         android:textSize="18sp">
