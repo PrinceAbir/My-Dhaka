@@ -27,12 +27,15 @@ public class Category extends AppCompatActivity {
     ArrayList<ModelMain> list;
     int[] images;
     String[] itemName;
+    String user_email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category);
 
+        Intent intent2 = getIntent();
+        user_email = intent2.getStringExtra("user_email");
 
         RecyclerOne();
         RecyclerTwo();
@@ -58,7 +61,7 @@ public class Category extends AppCompatActivity {
             list.add(model);
         }
 
-        categoryAdapter = new CategoryAdapter(this, list);
+        categoryAdapter = new CategoryAdapter(this,Category.this, list);
 
         recyclerView.setAdapter(categoryAdapter);
 
@@ -81,7 +84,7 @@ public class Category extends AppCompatActivity {
             list.add(model);
         }
 
-        categoryAdapter = new CategoryAdapter(this, list);
+        categoryAdapter = new CategoryAdapter(this,Category.this, list);
         recyclerView.setAdapter(categoryAdapter);
 
     }
@@ -105,7 +108,7 @@ public class Category extends AppCompatActivity {
             list.add(model);
         }
 
-        categoryAdapter = new CategoryAdapter(this, list);
+        categoryAdapter = new CategoryAdapter(this, Category.this,list);
         recyclerView.setAdapter(categoryAdapter);
 
     }
@@ -131,9 +134,9 @@ public class Category extends AppCompatActivity {
                 }
                 else if(Item.contains("Category"))
                 {
-                    Intent intent = new Intent(getApplicationContext(),Category.class);
-                    startActivity(intent);
-                    finish();
+                    Intent intent1 = new Intent(getApplicationContext(), Category.class);
+                    intent1.putExtra("user_email",user_email);
+                    startActivity(intent1);
                 }
                 else if (Item.contains("Notification"))
                 {

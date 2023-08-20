@@ -80,7 +80,9 @@ public class Login extends AppCompatActivity {
 
                 if (response.equalsIgnoreCase("success")){
                     progressBar.setVisibility(View.GONE);
-                    startActivity(new Intent(getApplicationContext(),Home.class));
+                    Intent intent = new Intent(Login.this,Home.class);
+                    intent.putExtra("user_email",email);
+                    startActivity(intent);
                 }
                 else if (response.equalsIgnoreCase("failed")){
                     progressBar.setVisibility(View.GONE);

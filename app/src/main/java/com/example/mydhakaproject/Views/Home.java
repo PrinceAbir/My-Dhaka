@@ -39,6 +39,7 @@ public class Home extends AppCompatActivity {
     String[] name;
 
     LottieAnimationView callButton;
+    String user_email;
 
 
     @Override
@@ -46,6 +47,8 @@ public class Home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Intent intent2 = getIntent();
+        user_email = intent2.getStringExtra("user_email");
 
         RecyclerPartOne();
         RecyclerPartTwo();
@@ -89,7 +92,7 @@ public class Home extends AppCompatActivity {
         }
 
 
-        homeAdapter = new HomeAdapter(this, list);
+        homeAdapter = new HomeAdapter(this,Home.this,  list);
         recyclerView.setAdapter(homeAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
         recyclerView.setHasFixedSize(true);
@@ -100,7 +103,9 @@ public class Home extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), Category.class));
+                Intent intent = new Intent(getApplicationContext(), Category.class);
+                intent.putExtra("user_email",user_email);
+                startActivity(intent);
             }
         });
 
@@ -125,7 +130,7 @@ public class Home extends AppCompatActivity {
         }
 
 
-        homeAdapter = new HomeAdapter(this, list);
+        homeAdapter = new HomeAdapter(this,Home.this, list);
         recyclerView.setAdapter(homeAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
         recyclerView.setHasFixedSize(true);
@@ -136,7 +141,9 @@ public class Home extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), Category.class));
+                Intent intent = new Intent(getApplicationContext(), Category.class);
+                intent.putExtra("user_email",user_email);
+                startActivity(intent);
             }
         });
     }
@@ -159,7 +166,7 @@ public class Home extends AppCompatActivity {
         }
 
 
-        homeAdapter = new HomeAdapter(this, list);
+        homeAdapter = new HomeAdapter(this,Home.this,  list);
         recyclerView.setAdapter(homeAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
         recyclerView.setHasFixedSize(true);
@@ -170,7 +177,9 @@ public class Home extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), Category.class));
+                Intent intent = new Intent(getApplicationContext(), Category.class);
+                intent.putExtra("user_email",user_email);
+                startActivity(intent);
             }
         });
 
@@ -196,7 +205,9 @@ public class Home extends AppCompatActivity {
                     finish();
 
                 } else if (Item.contains("Category")) {
+
                     Intent intent = new Intent(getApplicationContext(), Category.class);
+                    intent.putExtra("user_email",user_email);
                     startActivity(intent);
                     finish();
                 } else if (Item.contains("Notification")) {
