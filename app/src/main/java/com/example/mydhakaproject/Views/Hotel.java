@@ -20,16 +20,12 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
-import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
-import com.example.mydhakaproject.Adapters.FireServiceAdapter;
-import com.example.mydhakaproject.Adapters.HospitalAdapter;
 import com.example.mydhakaproject.Adapters.HotelAdapter;
 import com.example.mydhakaproject.Models.HotelModel;
-import com.example.mydhakaproject.Models.Model;
 import com.example.mydhakaproject.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
@@ -50,7 +46,6 @@ public class Hotel extends AppCompatActivity {
 
     TextView recycler_title;
     String user_email;
-
 
 
     @Override
@@ -125,7 +120,7 @@ public class Hotel extends AppCompatActivity {
                 recyclerView.setVisibility(View.VISIBLE);
                 recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
                 recyclerView.setHasFixedSize(true);
-                hotelAdapter = new HotelAdapter(getApplicationContext(),Hotel.this, list);
+                hotelAdapter = new HotelAdapter(getApplicationContext(), Hotel.this, list);
                 recyclerView.setAdapter(hotelAdapter);
 
             }
@@ -135,7 +130,6 @@ public class Hotel extends AppCompatActivity {
 
             }
         });
-
 
 
         requestQueue.add(jsonArrayRequest);
@@ -172,12 +166,15 @@ public class Hotel extends AppCompatActivity {
 
         ImageSlider imageSlider = findViewById(R.id.hotel_image_slider);
 
-        ItemList.add(new SlideModel(R.drawable.fireservice1, ScaleTypes.FIT));
-        ItemList.add(new SlideModel(R.drawable.fireservice2, ScaleTypes.FIT));
-        ItemList.add(new SlideModel(R.drawable.fireservice3, ScaleTypes.FIT));
-        ItemList.add(new SlideModel(R.drawable.fireservice4, ScaleTypes.FIT));
-        ItemList.add(new SlideModel(R.drawable.fireservice5, ScaleTypes.FIT));
-        ItemList.add(new SlideModel(R.drawable.fireservice6, ScaleTypes.FIT));
+        ItemList.add(new SlideModel(R.drawable.hotelone, ScaleTypes.FIT));
+        ItemList.add(new SlideModel(R.drawable.hoteltwo, ScaleTypes.FIT));
+        ItemList.add(new SlideModel(R.drawable.hotelthree, ScaleTypes.FIT));
+        ItemList.add(new SlideModel(R.drawable.hotelfour, ScaleTypes.FIT));
+        ItemList.add(new SlideModel(R.drawable.hotelfive, ScaleTypes.FIT));
+        ItemList.add(new SlideModel(R.drawable.hotelsix, ScaleTypes.FIT));
+        ItemList.add(new SlideModel(R.drawable.hotelseven, ScaleTypes.FIT));
+        ItemList.add(new SlideModel(R.drawable.hoteleight, ScaleTypes.FIT));
+        ItemList.add(new SlideModel(R.drawable.hotelnine, ScaleTypes.FIT));
 
         imageSlider.setImageList(ItemList);
 
@@ -193,29 +190,24 @@ public class Hotel extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
-                String Item  = item.getTitle().toString();
+                String Item = item.getTitle().toString();
                 item.getIcon().setTint(Color.RED);
 
-                if (Item.contains("Home")){
+                if (Item.contains("Home")) {
 
-                    Intent intent = new Intent(getApplicationContext(),Home.class);
+                    Intent intent = new Intent(getApplicationContext(), Home.class);
                     startActivity(intent);
                     finish();
 
-                }
-                else if(Item.contains("Category"))
-                {
-                    Intent intent = new Intent(getApplicationContext(),Category.class);
+                } else if (Item.contains("Category")) {
+                    Intent intent = new Intent(getApplicationContext(), Category.class);
                     startActivity(intent);
                     finish();
-                }
-                else if (Item.contains("Notification"))
-                {
+                } else if (Item.contains("Notification")) {
 
                     Toast.makeText(getApplicationContext(), "Hello I am Notification", Toast.LENGTH_SHORT).show();
 
-                }
-                else{
+                } else {
 
 
                     Toast.makeText(getApplicationContext(), "Hello I am About", Toast.LENGTH_SHORT).show();

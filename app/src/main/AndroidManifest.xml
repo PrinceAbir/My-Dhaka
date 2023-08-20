@@ -26,6 +26,15 @@
         android:theme="@style/Theme.MyDhakaProject"
         tools:targetApi="31">
         <activity
+            android:name=".Views.BookRoom"
+            android:exported="false" />
+        <activity
+            android:name=".Views.WebView"
+            android:exported="false" />
+        <activity
+            android:name=".Views.HotelView"
+            android:exported="false" />
+        <activity
             android:name=".Views.Hotel"
             android:exported="false" />
         <activity

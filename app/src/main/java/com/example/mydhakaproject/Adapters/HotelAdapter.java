@@ -15,9 +15,13 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.bumptech.glide.Glide;
 import com.example.mydhakaproject.Models.HotelModel;
+import com.example.mydhakaproject.Models.Model;
 import com.example.mydhakaproject.R;
+import com.example.mydhakaproject.Views.Hotel;
+import com.example.mydhakaproject.Views.HotelView;
 
 import java.util.ArrayList;
 import java.util.List;
