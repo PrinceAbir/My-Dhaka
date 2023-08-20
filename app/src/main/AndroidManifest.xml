@@ -26,6 +26,9 @@
         android:theme="@style/Theme.MyDhakaProject"
         tools:targetApi="31">
         <activity
+            android:name=".Views.Hotel"
+            android:exported="false" />
+        <activity
             android:name=".Views.Login"
             android:exported="false" />
         <activity

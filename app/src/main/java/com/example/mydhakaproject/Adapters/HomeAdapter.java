@@ -1,6 +1,7 @@
 package com.example.mydhakaproject.Adapters;
 
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -17,6 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.mydhakaproject.Models.ModelMain;
 import com.example.mydhakaproject.R;
 import com.example.mydhakaproject.Views.Ambulance;
+import com.example.mydhakaproject.Views.Category;
 import com.example.mydhakaproject.Views.FireService;
 import com.example.mydhakaproject.Views.Hospital;
 import com.example.mydhakaproject.Views.Police;
@@ -28,11 +30,13 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder> 
 
 
     Context context;
+    Activity activity;
     ArrayList<ModelMain> list;
 
 
-    public HomeAdapter(Context context, ArrayList<ModelMain> list) {
+    public HomeAdapter(Context context,Activity activity, ArrayList<ModelMain> list) {
         this.context = context;
+        this.activity = activity;
         this.list = list;
     }
 
@@ -59,6 +63,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder> 
             public void onClick(View v) {
                 String text = list.get(holder.getAdapterPosition()).getName();
 
+
                 if (text.contains("Hospital")) {
 
                     context.startActivity(new Intent(context, Hospital.class));
@@ -72,6 +77,14 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder> 
                 } else if (text.contains("Fire Service")) {
 
                     context.startActivity(new Intent(context, FireService.class));
+                }
+                else if (text.contains("Hotel")) {
+                    Intent intent = activity.getIntent();
+                    String user_email = intent.getStringExtra("user_email");
+
+                    Intent intent1 = new Intent(context, Category.class);
+                    intent1.putExtra("user_email",user_email);
+                    activity.startActivity(intent1);
                 }
 
             }

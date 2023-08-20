@@ -1,5 +1,6 @@
 package com.example.mydhakaproject.Adapters;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -18,9 +19,11 @@ import com.example.mydhakaproject.R;
 import com.example.mydhakaproject.Views.Ambulance;
 import com.example.mydhakaproject.Views.BloodBank;
 import com.example.mydhakaproject.Views.BloodDonor;
+import com.example.mydhakaproject.Views.Category;
 import com.example.mydhakaproject.Views.FireService;
 import com.example.mydhakaproject.Views.HelpMe;
 import com.example.mydhakaproject.Views.Hospital;
+import com.example.mydhakaproject.Views.Hotel;
 import com.example.mydhakaproject.Views.Lawyer;
 import com.example.mydhakaproject.Views.Police;
 
@@ -31,11 +34,13 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyView
 
 
     Context context;
+    Activity activity;
     ArrayList<ModelMain> list;
 
 
-    public CategoryAdapter(Context context, ArrayList<ModelMain> list) {
+    public CategoryAdapter(Context context,Activity activity, ArrayList<ModelMain> list) {
         this.context = context;
+        this.activity = activity;
         this.list = list;
     }
 
@@ -88,6 +93,15 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyView
                 } else if (text.contains("Help Me")) {
 
                     context.startActivity(new Intent(context, HelpMe.class));
+                }
+                else if (text.contains("Hotel")) {
+
+                    Intent intent = activity.getIntent();
+                    String user_email = intent.getStringExtra("user_email");
+
+                    Intent intent1 = new Intent(context, Hotel.class);
+                    intent1.putExtra("user_email",user_email);
+                    activity.startActivity(intent1);
                 }
 
 
