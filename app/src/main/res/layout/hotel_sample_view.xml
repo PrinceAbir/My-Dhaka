@@ -13,8 +13,8 @@
         android:id="@+id/HotelImage"
         android:layout_weight="1"
         android:layout_width="50dp"
-        android:scaleType="centerCrop"
         android:layout_height="match_parent"
+        android:scaleType="fitCenter"
         android:src="@drawable/dhaka_icon"
         android:layout_margin="3dp"
         android:layout_gravity="center">

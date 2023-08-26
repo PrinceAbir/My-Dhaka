@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Views.SIM">
+
+    <LinearLayout
+        android:id="@+id/buttonLayouts1"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+
+        android:padding="5dp">
+
+        <Button
+            android:id="@+id/robiButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Robi"
+            android:layout_margin="3dp"
+            android:backgroundTint="@color/black">
+
+        </Button>
+        <Button
+            android:id="@+id/grameenPhoneButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Grameenphone"
+            android:layout_margin="3dp"
+            android:backgroundTint="@color/black">
+
+        </Button>
+        <Button
+            android:id="@+id/airtelButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Airtel"
+            android:layout_margin="3dp"
+            android:backgroundTint="@color/black">
+
+        </Button>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonLayouts2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonLayouts1"
+
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <Button
+            android:id="@+id/teletalkButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:backgroundTint="@color/black"
+            android:text="Teletalk">
+
+        </Button>
+
+        <Button
+            android:id="@+id/banglalinkButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:backgroundTint="@color/black"
+            android:text="Banglalink">
+
+        </Button>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/SIM_Operator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonLayouts2"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:paddingStart="5dp"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold|italic"
+        tools:ignore="RtlSymmetry">
+
+    </TextView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/SIMRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/nav"
+        android:layout_below="@id/SIM_Operator">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <LinearLayout
+        android:id="@+id/nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <include layout="@layout/bottom_navigation" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

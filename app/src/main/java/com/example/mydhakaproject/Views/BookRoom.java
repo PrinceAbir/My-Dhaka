@@ -91,6 +91,7 @@ public class BookRoom extends AppCompatActivity {
                         String bedCount = jsonObject.getString("bed_count");
                         String Price = jsonObject.getString("price");
                         String Status = jsonObject.getString("status");
+                        String image = jsonObject.getString("image");
 
                         RoomModel roomModel = new RoomModel();
 
@@ -98,7 +99,7 @@ public class BookRoom extends AppCompatActivity {
 
                         roomModel.setHotelName(name);
                         roomModel.setHotel_ID(Integer.parseInt(hotel_id));
-                        roomModel.setHotel_Image(image_url);
+                        roomModel.setHotel_Image(image);
                         roomModel.setRoomNumber(roomNumber);
                         roomModel.setRoomType(roomType);
                         roomModel.setBedCount(bedCount);

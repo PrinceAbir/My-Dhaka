@@ -21,7 +21,11 @@ import com.example.mydhakaproject.Views.Ambulance;
 import com.example.mydhakaproject.Views.Category;
 import com.example.mydhakaproject.Views.FireService;
 import com.example.mydhakaproject.Views.Hospital;
+import com.example.mydhakaproject.Views.Hotel;
+import com.example.mydhakaproject.Views.Place;
 import com.example.mydhakaproject.Views.Police;
+import com.example.mydhakaproject.Views.Restaurant;
+import com.example.mydhakaproject.Views.WebsiteView;
 
 import java.util.ArrayList;
 
@@ -78,20 +82,59 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder> 
 
                     context.startActivity(new Intent(context, FireService.class));
                 }
+                else if (text.contains("Restaurant")) {
+
+                    context.startActivity(new Intent(context, Restaurant.class));
+                }
+                else if (text.contains("Tourist Spot")) {
+
+                    context.startActivity(new Intent(context, Place.class));
+                }
                 else if (text.contains("Hotel")) {
                     Intent intent = activity.getIntent();
                     String user_email = intent.getStringExtra("user_email");
 
-                    Intent intent1 = new Intent(context, Category.class);
+                    Intent intent1 = new Intent(context, Hotel.class);
                     intent1.putExtra("user_email",user_email);
                     activity.startActivity(intent1);
                 }
+                else if (text.contains("Desco")) {
+                    String url = "http://prepaid.desco.org.bd/customer/#/customer-login";
+                    GoToWeb(url);
+
+                }
+                 else if (text.contains("Dhaka WASA")) {
+                    String url = "http://app.dwasa.org.bd/index.php?type_name=member&page_name=acc_index&panel_index=";
+                    GoToWeb(url);
+
+                }
+                  else if (text.contains("Titas")) {
+                    String url = "https://portal.titasgas.org.bd/login";
+                    GoToWeb(url);
+
+                }else if (text.contains("Daraz")) {
+                    String url = "https://www.daraz.com.bd/";
+                    GoToWeb(url);
+
+                }
+
 
             }
         });
 
 
     }
+
+    private void GoToWeb(String url){
+
+        Intent intent = new Intent(context,WebsiteView.class);
+        intent.putExtra("link",url);
+        context.startActivity(intent);
+
+    }
+
+
+
 
 
     @Override

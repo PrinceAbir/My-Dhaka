@@ -16,7 +16,7 @@ import com.example.mydhakaproject.R;
 public class HotelView extends AppCompatActivity {
 
     ImageView hotel_image;
-    TextView hotel_details,hotel_name;
+    TextView hotel_details,hotel_name,hotel_address;
     Button book,callButton,emailButton;
     String user_email;
 
@@ -29,6 +29,7 @@ public class HotelView extends AppCompatActivity {
         hotel_name = findViewById(R.id.hotel_name);
         hotel_image = findViewById(R.id.hotel_image);
         hotel_details = findViewById(R.id.hotel_details);
+        hotel_address = findViewById(R.id.hotel_address);
 
 
         book = findViewById(R.id.book_button);
@@ -53,6 +54,7 @@ public class HotelView extends AppCompatActivity {
 
 
         hotel_name.setText(name);
+        hotel_address.setText(address);
         Glide.with(this).load(image_url).into(hotel_image);
 
 

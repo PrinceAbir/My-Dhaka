@@ -4,23 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Views.HotelView"
+    tools:context=".Views.RestaurantView"
     tools:layout_editor_absoluteX="-16dp"
     tools:layout_editor_absoluteY="0dp">
 
 
     <TextView
-        android:id="@+id/hotel_name"
+        android:id="@+id/restaurant_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Hotel Sarina"
         android:textStyle="bold"
+        android:padding="10dp"
+        android:layout_margin="10dp"
         android:textColor="@color/black"
         android:textSize="22sp"
         android:textAlignment="center"
-        android:padding="10dp"
-        android:layout_margin="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/hotel_image"
+        app:layout_constraintBottom_toTopOf="@+id/restaurant_image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,7 +28,7 @@
         app:layout_constraintVertical_bias="0.82" />
 
     <ImageView
-        android:id="@+id/hotel_image"
+        android:id="@+id/restaurant_image"
         android:layout_width="354dp"
         android:layout_height="234dp"
         android:layout_marginTop="108dp"
@@ -40,25 +40,24 @@
 
 
     <TextView
-        android:id="@+id/hotel_details"
+        android:id="@+id/restaurant_details"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
         android:padding="10dp"
-        android:layout_marginTop="40dp"
-        android:text="This Hotel is a popular hotel in Dhaka city. You can book room here with affordable price."
+        android:layout_margin="10dp"
+        android:text="This Restaurant is a popular hotel in Dhaka city. You can find delicious food here with good price."
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/nav"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hotel_image"
-        app:layout_constraintVertical_bias="0.111" />
+        app:layout_constraintTop_toBottomOf="@+id/restaurant_image"
+        app:layout_constraintVertical_bias="0.114" />
 
     <TextView
-        android:id="@+id/hotel_address"
+        android:id="@+id/restaurant_address"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
@@ -72,8 +71,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hotel_details"
-        app:layout_constraintVertical_bias="0.811" />
+        app:layout_constraintTop_toBottomOf="@+id/restaurant_details"
+
+        app:layout_constraintVertical_bias="0.791" />
 
     <Button
         android:id="@+id/CALL_BUTTON"
@@ -81,22 +81,12 @@
         android:layout_height="60dp"
         android:layout_marginStart="10dp"
         android:layout_marginBottom="20dp"
-        android:layout_marginEnd="5dp"
-        android:backgroundTint="#4CFFA6"
-        android:text="Call"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/nav"
-        app:layout_constraintStart_toEndOf="@+id/book_button" />
-
-    <Button
-        android:id="@+id/book_button"
-        android:layout_width="153dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginBottom="20dp"
         android:backgroundTint="@color/black"
-        android:text="Book a Room"
+        android:text="Call"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/nav"
+        app:layout_constraintEnd_toStartOf="@+id/EMAIL_BUTTON"
+        app:layout_constraintHorizontal_bias="0.92"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -104,9 +94,9 @@
         android:layout_width="100dp"
         android:layout_height="60dp"
         android:layout_marginEnd="16dp"
-        android:backgroundTint="#4CFFA6"
+        android:backgroundTint="@color/black"
         android:text="Email"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/CALL_BUTTON"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/CALL_BUTTON"
@@ -126,7 +116,19 @@
 
     </LinearLayout>
 
-
+    <Button
+        android:id="@+id/visit"
+        android:layout_width="140dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="20dp"
+        android:text="Visit"
+        app:layout_constraintBottom_toTopOf="@+id/nav"
+        app:layout_constraintEnd_toStartOf="@+id/CALL_BUTTON"
+        app:layout_constraintHorizontal_bias="0.181"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/restaurant_address"
+        app:layout_constraintVertical_bias="1.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

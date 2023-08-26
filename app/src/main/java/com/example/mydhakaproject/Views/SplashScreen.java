@@ -42,7 +42,7 @@ public class SplashScreen extends AppCompatActivity {
             public void run() {
                 animation.cancelAnimation();
                 finish();
-                startActivity(new Intent(getApplicationContext(), Login.class));
+                startActivity(new Intent(getApplicationContext(), Home.class));
 
             }
         }, 6000);

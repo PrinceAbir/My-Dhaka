@@ -21,11 +21,12 @@
 
     </TextView>
 
-    <ScrollView
+
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/nav"
-        android:layout_below="@id/title">
+        android:layout_above="@+id/nav"
+        android:layout_below="@+id/title">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -42,7 +43,9 @@
                 android:text="Emergency"
                 android:textColor="#878787"
                 android:textSize="16sp"
-                android:textStyle="bold"></TextView>
+                android:textStyle="bold">
+
+            </TextView>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerOne"
@@ -51,6 +54,7 @@
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="5dp"
+                android:nestedScrollingEnabled="false"
                 android:layout_marginBottom="10dp">
 
             </androidx.recyclerview.widget.RecyclerView>
@@ -63,10 +67,14 @@
                 android:text="Others"
                 android:textColor="#878787"
                 android:textSize="16sp"
-                android:textStyle="bold"></TextView>
+                android:textStyle="bold">
+
+            </TextView>
 
 
             <androidx.recyclerview.widget.RecyclerView
+
+                android:nestedScrollingEnabled="false"
                 android:id="@+id/recyclerTwo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -86,9 +94,12 @@
                 android:text="Utility &amp; More"
                 android:textColor="#878787"
                 android:textSize="16sp"
-                android:textStyle="bold"></TextView>
+                android:textStyle="bold">
+
+            </TextView>
 
             <androidx.recyclerview.widget.RecyclerView
+                android:nestedScrollingEnabled="false"
                 android:id="@+id/recyclerThree"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -96,17 +107,17 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="5dp"
                 android:layout_marginBottom="10dp">
-
             </androidx.recyclerview.widget.RecyclerView>
         </LinearLayout>
-    </ScrollView>
+
+
+    </androidx.core.widget.NestedScrollView>
 
     <LinearLayout
         android:id="@+id/nav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true">
-
         <include layout="@layout/bottom_navigation" />
 
 
