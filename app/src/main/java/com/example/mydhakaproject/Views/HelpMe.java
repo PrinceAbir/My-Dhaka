@@ -41,7 +41,7 @@ public class HelpMe extends AppCompatActivity {
     private static final int REQUEST_CODE = 100;
     private static final int REQUEST_SMS_PERMISSION = 200;
     FusedLocationProviderClient fusedLocationProviderClient;
-    String country, city, address, longitude, latitude;
+    String country, city, address, longitude, latitude,map;
     Button helpMeButton, saveMessageButton;
     TextView textView;
     FloatingActionButton addButton;
@@ -108,8 +108,9 @@ public class HelpMe extends AppCompatActivity {
                                 List<Address> addresses = null;
                                 try {
                                     addresses = geocoder.getFromLocation(location.getLatitude(), location.getLongitude(), 1);
-                                    latitude = ("Latitude :" + addresses.get(0).getLatitude());
-                                    longitude = ("Longitude :" + addresses.get(0).getLongitude());
+                                    latitude = String.valueOf((addresses.get(0).getLatitude()));
+                                    longitude = String.valueOf((addresses.get(0).getLongitude()));
+                                    map = "Google Map Link: "+latitude +","+ longitude;
                                     address = ("Address :" + addresses.get(0).getAddressLine(0));
                                     city = ("City :" + addresses.get(0).getLocality());
                                     country = ("Country :" + addresses.get(0).getCountryName());
@@ -126,7 +127,7 @@ public class HelpMe extends AppCompatActivity {
 
 
                                     if (!msg.isEmpty()) {
-                                        String Message = msg + "\n" + latitude + "\n" + longitude + "\n" + address + "\n" + city + "\n" + country + "\n\n";
+                                        String Message = msg + "\n"+ map+ "\n" + address + "\n" + city + "\n" + country + "\n\n";
                                         if (!num1.isEmpty()) {
                                             Toast.makeText(HelpMe.this, Message+ " ", Toast.LENGTH_SHORT).show();
                                             SendSMS(num1, Message);

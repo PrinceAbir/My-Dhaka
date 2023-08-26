@@ -50,6 +50,7 @@ public class Category extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.recyclerOne);
         recyclerView.setLayoutManager(new GridLayoutManager(this, 3, RecyclerView.VERTICAL, false));
+        recyclerView.setHasFixedSize(true);
 
         images = new int[]{R.drawable.hospital, R.drawable.ambulance, R.drawable.police, R.drawable.fire_service, R.drawable.blood_donor, R.drawable.blood_bank, R.drawable.lawyer, R.drawable.help_me};
 
@@ -72,11 +73,12 @@ public class Category extends AppCompatActivity {
         list = new ArrayList<>();
 
         recyclerView = findViewById(R.id.recyclerTwo);
-        recyclerView.setLayoutManager(new GridLayoutManager(this, 3, RecyclerView.VERTICAL, false));
+        recyclerView.setLayoutManager(new GridLayoutManager(this,3));
+        recyclerView.setHasFixedSize(true);
 
-        images = new int[]{R.drawable.hotel, R.drawable.restaurant, R.drawable.shopping_mall, R.drawable.parks};
+        images = new int[]{R.drawable.hotel, R.drawable.restaurant,R.drawable.parks};
 
-        itemName = getResources().getStringArray(R.array.CategoryTwo);
+        itemName = getResources().getStringArray(R.array.MainSecondString);
 
 
         for (int i = 0; i < images.length; i++) {
@@ -95,8 +97,10 @@ public class Category extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.recyclerThree);
         recyclerView.setLayoutManager(new GridLayoutManager(this, 3, RecyclerView.VERTICAL, false));
+        recyclerView.setHasFixedSize(true);
 
-        images = new int[]{R.drawable.desco_icon, R.drawable.wasa_icon, R.drawable.titas_icon, R.drawable.daraz_icon,
+
+        images = new int[]{R.drawable.desco_icon, R.drawable.wasa_icon, R.drawable.titas_icon, R.drawable.daraz_icon,R.drawable.pathaoicon,R.drawable.foodpandaicon,
                             R.drawable.bikroy_icon,R.drawable.bdjobs_icon,R.drawable.gozayaan_icon,R.drawable.shohoz_icon,
                             R.drawable.bdrailway_icon,R.drawable.sim_icon};
 

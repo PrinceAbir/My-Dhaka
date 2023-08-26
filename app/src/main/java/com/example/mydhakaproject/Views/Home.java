@@ -119,7 +119,7 @@ public class Home extends AppCompatActivity {
         list = new ArrayList<>();
 
 
-        int[] imageID = {R.drawable.hotel, R.drawable.restaurant, R.drawable.shopping_mall};
+        int[] imageID = {R.drawable.hotel, R.drawable.restaurant, R.drawable.tourist_spot};
 
         name = getResources().getStringArray(R.array.MainSecondString);
 

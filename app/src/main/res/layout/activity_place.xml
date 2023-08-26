@@ -5,24 +5,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Views.Police">
+    tools:context=".Views.Place">
 
     <LinearLayout
-        android:id="@+id/search_area"
+        android:id="@+id/place_search_area"
         android:layout_width="match_parent"
         android:layout_height="80dp"
+        android:layout_alignParentTop="true"
         android:background="#0011FF"
         android:gravity="center"
         android:orientation="vertical">
 
         <androidx.appcompat.widget.SearchView
-            android:id="@+id/police_search_view"
+            android:id="@+id/place_search_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:background="@color/white"
             android:paddingStart="10dp"
-            app:queryHint="Search Ambulance"
+            app:queryHint="Search Place"
             tools:ignore="RtlSymmetry">
 
         </androidx.appcompat.widget.SearchView>
@@ -34,7 +35,7 @@
         android:id="@+id/slider_area"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/search_area"
+        android:layout_below="@id/place_search_area"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
         android:orientation="vertical">
@@ -52,8 +53,9 @@
 
         </TextView>
 
+
         <com.denzcoskun.imageslider.ImageSlider
-            android:id="@+id/police_image_slider"
+            android:id="@+id/place_image_slider"
             android:layout_width="wrap_content"
             android:layout_height="180dp"
             android:layout_marginStart="10dp"
@@ -66,7 +68,7 @@
     </LinearLayout>
 
     <ProgressBar
-        android:id="@+id/police_progress_bar"
+        android:id="@+id/place_progress_bar"
         android:layout_width="match_parent"
         android:layout_height="78dp"
         android:layout_below="@id/slider_area"
@@ -80,14 +82,15 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_above="@id/nav"
         android:layout_below="@id/slider_area"
         android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/police_recycler_title"
+            android:id="@+id/place_recycler_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -101,7 +104,7 @@
         </TextView>
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/PoliceRecyclerView"
+            android:id="@+id/PlaceRecyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="10dp"
@@ -112,7 +115,6 @@
 
 
     </LinearLayout>
-
 
     <LinearLayout
         android:id="@+id/nav"

@@ -11,7 +11,7 @@
     <string-array name="MainSecondString">
         <item>Hotel</item>
         <item>Restaurant</item>
-        <item>Shopping Mall</item>
+        <item>Tourist Spot</item>
     </string-array>
 
     <string-array name="MainThirdString">
@@ -32,20 +32,15 @@
         <item>Help Me</item>
     </string-array>
 
-    <string-array name="CategoryTwo">
-        <item>Hotel</item>
-        <item>Restaurant</item>
-        <item>Shopping Mall</item>
-        <item>Places</item>
-    </string-array>
-
     <string-array name="CategoryThree">
 
         <item>Desco</item>
         <item>Dhaka WASA</item>
         <item>Titas</item>
         <item>Daraz</item>
-        <item>Birkoy</item>
+        <item>Pathao</item>
+        <item>Food Panda</item>
+        <item>Bikroy</item>
         <item>BD Jobs</item>
         <item>Goo Zayaan</item>
         <item>Sohoz Bus</item>

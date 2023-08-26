@@ -4,23 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Views.HotelView"
+    tools:context=".Views.PlaceView"
     tools:layout_editor_absoluteX="-16dp"
     tools:layout_editor_absoluteY="0dp">
 
 
     <TextView
-        android:id="@+id/hotel_name"
+        android:id="@+id/place_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Hotel Sarina"
         android:textStyle="bold"
+        android:padding="10dp"
+        android:layout_margin="10dp"
         android:textColor="@color/black"
         android:textSize="22sp"
         android:textAlignment="center"
-        android:padding="10dp"
-        android:layout_margin="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/hotel_image"
+        app:layout_constraintBottom_toTopOf="@+id/place_image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,7 +28,7 @@
         app:layout_constraintVertical_bias="0.82" />
 
     <ImageView
-        android:id="@+id/hotel_image"
+        android:id="@+id/place_image"
         android:layout_width="354dp"
         android:layout_height="234dp"
         android:layout_marginTop="108dp"
@@ -40,77 +40,41 @@
 
 
     <TextView
-        android:id="@+id/hotel_details"
+        android:id="@+id/place_details"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
         android:padding="10dp"
-        android:layout_marginTop="40dp"
-        android:text="This Hotel is a popular hotel in Dhaka city. You can book room here with affordable price."
+        android:layout_margin="10dp"
+        android:text="This Restaurant is a popular hotel in Dhaka city. You can find delicious food here with good price."
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/nav"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hotel_image"
-        app:layout_constraintVertical_bias="0.111" />
+        app:layout_constraintTop_toBottomOf="@+id/place_image"
+        app:layout_constraintVertical_bias="0.114" />
+
 
     <TextView
-        android:id="@+id/hotel_address"
+        android:id="@+id/place_address"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:layout_marginTop="49dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginBottom="68dp"
         android:padding="10dp"
-        android:text="Motijhin, Dhaka - 1216"
+        android:text=""
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/CALL_BUTTON"
+        app:layout_constraintBottom_toTopOf="@+id/googleMapButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hotel_details"
-        app:layout_constraintVertical_bias="0.811" />
-
-    <Button
-        android:id="@+id/CALL_BUTTON"
-        android:layout_width="100dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginBottom="20dp"
-        android:layout_marginEnd="5dp"
-        android:backgroundTint="#4CFFA6"
-        android:text="Call"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/nav"
-        app:layout_constraintStart_toEndOf="@+id/book_button" />
-
-    <Button
-        android:id="@+id/book_button"
-        android:layout_width="153dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginBottom="20dp"
-        android:backgroundTint="@color/black"
-        android:text="Book a Room"
-        app:layout_constraintBottom_toTopOf="@+id/nav"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/EMAIL_BUTTON"
-        android:layout_width="100dp"
-        android:layout_height="60dp"
-        android:layout_marginEnd="16dp"
-        android:backgroundTint="#4CFFA6"
-        android:text="Email"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="@+id/CALL_BUTTON"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/CALL_BUTTON"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/place_details"
+        app:layout_constraintVertical_bias="1.0" />
 
     <LinearLayout
         android:id="@+id/nav"
@@ -120,13 +84,22 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
-
         <include layout="@layout/bottom_navigation" />
 
 
     </LinearLayout>
 
-
+    <Button
+        android:id="@+id/googleMapButton"
+        android:layout_width="140dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="8dp"
+        android:text="Google Map"
+        android:backgroundTint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/nav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
